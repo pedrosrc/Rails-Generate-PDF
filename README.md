@@ -9,7 +9,6 @@ The project is still under development, and the upcoming updates will focus on t
 - [ ] Generate PDF from images
 - [ ] Enhancement in style selection
 - [ ] Usability improvement
-- [ ] Tarefa 5
 
 ## 💻 Prerequisites
 
