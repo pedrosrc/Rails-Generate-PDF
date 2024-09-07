@@ -10,12 +10,13 @@
     <%= link_to "New post", new_post_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
-  <div id="posts" class="min-w-full bg-blue-500 p-2 rounded-lg mt-4">
+  <div id="posts" class="min-w-full mt-4">
     <% @posts.each do |post| %>
-      <%= render post %> 
-    <p>
-      <%= link_to "Show this post", post, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    </p>
+      <div class="mb-9 p-4 rounded-lg shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]">
+        <strong class="block font-bold mb-2 ml-2"><%= post.title %></strong>
+        
+        <p><%= link_to "Show this post", post, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium hover:bg-blue-500  hover:text-white" %></p>
+      </div>
     <% end %>
   </div>
 </div>
