@@ -59,6 +59,15 @@ class PostsController < ApplicationController
 
   def download
     post_pdf = Prawn::Document.new
+
+    post_pdf.bounding_box([ post_pdf.bounds.left, post_pdf.bounds.top ],
+     width: post_pdf.bounds.width) do
+      post_pdf.text "Bloggin App", size: 30, style: :bold, align: :center
+      post_pdf.stroke_horizontal_rule
+    end
+
+    post_pdf.move_down 30
+
     post_pdf.text @post.title, size: 20, style: :bold, align: :center
     post_pdf.text @post.description
 
